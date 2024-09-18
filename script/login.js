@@ -12,12 +12,31 @@ prevent the page from reloading on a button click,
 We need to pass the event parameter to the function. 
 
 */
+
 document.getElementById("login-button").addEventListener("click", function (event) {
     event.preventDefault(); // Prevents the page from reloading
+
+    // Hardcoded phone number and PIN for validation
+    const hardcodedPhoneNumber = "1234567890";
+    const hardcodedPinNumber = "1234";
 
     // Get the value of the phone number
     const phoneNumber = document.getElementById("phone-number").value;
 
-    // Use the phone number as needed
-    console.log("Phone Number: ", phoneNumber);
+    // Get the value of the PIN number
+    const pinNumber = document.getElementById("pin-number").value;
+
+    // Check if phone number or PIN is empty
+    if (!phoneNumber || !pinNumber) {
+        alert("Please enter phone number and PIN.");
+    } else {
+        // Check if entered values match the hardcoded ones
+        if (phoneNumber === hardcodedPhoneNumber && pinNumber === hardcodedPinNumber) {
+            // alert("Phone Number and PIN are correct!");
+            window.location.href = "HomePage.html"; // Redirect to HomePage.html
+        } else {
+            alert("Invalid phone number or PIN. Please try again.");
+        }
+    }
 });
+
