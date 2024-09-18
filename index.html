@@ -8,6 +8,8 @@
 
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="script/login.js" defer></script>
 </head>
 
 <body>
@@ -26,7 +28,7 @@
                                         <label class="label">
                                             <span class="label-text">Phone Number</span>
                                         </label>
-                                        <input type="tel" placeholder="Enter Phone Number" class="input input-bordered"
+                                        <input id="phone-number" type="tel" placeholder="Enter Phone Number" class="input input-bordered"
                                             required />
                                     </div>
 
@@ -41,7 +43,7 @@
                                         </label>
                                     </div>
                                     <div class="form-control mt-6">
-                                        <button class="btn btn-primary">Login</button>
+                                        <button  id="login-button" class="btn btn-primary">Login</button>
                                     </div>
                                 </form>
                             </div>
