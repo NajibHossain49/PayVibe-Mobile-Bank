@@ -11,8 +11,19 @@
 //     return MoneyAmount;
 // }
 
+
+// Function to get the value from the "PIN" input field
 function getInputFieldValueById(id) {
-    const inputValue = parseFloat(document.getElementById(id).value);
+    const inputNumber = parseFloat(document.getElementById(id).value);
+   
     
-    return inputValue;
+    return inputNumber;
+}
+
+// Function to get the value from the "BALANCE" input field
+function getBalanceInputFieldValueById(id) {
+    const inputBalance = parseFloat(document.getElementById(id).innerText);
+    
+    
+    return inputBalance;
 }

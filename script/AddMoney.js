@@ -41,8 +41,27 @@ document.getElementById("add-money").addEventListener("click", function (event) 
     const MoneyAmount = getInputFieldValueById("add-money-amount");
 
     const pinNumber = getInputFieldValueById("pinNumber");
-    
 
-    // Log the value to the console (you can use it elsewhere in your code as well)
-    console.log(MoneyAmount , pinNumber);
+    // Get the current balance and add the money amount to it
+    let currentBalance = getBalanceInputFieldValueById("balance");
+
+    // Hardcoded PIN for validation
+    const hardcodedPinNumber = 1234;
+
+
+    // Check if the entered PIN is correct
+    if (pinNumber === hardcodedPinNumber) {
+
+        currentBalance = currentBalance + MoneyAmount;
+        // Update the balance
+
+        document.getElementById("balance").innerText = currentBalance;
+
+        alert("Money added successfully! New balance: " + currentBalance);
+    }
+
+    else {
+        alert("Invalid PIN. Please try again.");
+    }
+
 });
