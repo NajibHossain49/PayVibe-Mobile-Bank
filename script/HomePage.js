@@ -17,13 +17,13 @@ document.getElementById("add-money").addEventListener("click", function (event) 
         let currentBalance = parseFloat(document.getElementById("balance").innerText);
 
         currentBalance = currentBalance + MoneyAmount;
-        console.log(currentBalance)
 
 
         // Update the balance
         document.getElementById("balance").innerText = currentBalance;
 
         alert("Money added successfully! New balance: " + currentBalance);
+
     }
 
     else {
