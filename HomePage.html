@@ -7,8 +7,9 @@
     <title>PayVibe-Mobile-Bank Home Page</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="script/HomePage.js" defer></script>
+    <script src="script/AddMoney.js" defer></script>
     <script src="script/cashOut.js" defer></script>
+    <script src="script/ToggleFeature.js" defer></script>
 
 </head>
 
@@ -33,13 +34,13 @@
 
                     <!-- user action Button -->
                     <div>
-                        <button class="btn btn-lg">Add Money</button>
-                        <button class="btn btn-lg">Cash Out</button>
+                        <button id="ToggleAddMoney" class="btn btn-lg">Add Money</button>
+                        <button id="ToggleCashOut" class="btn btn-lg">Cash Out</button>
                     </div>
                     <div class="divider"></div>
 
                     <!-- Add Money From  START -->
-                    <div class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <div id="addMoneySection" class=" card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                         <form class="card-body">
                             <div class="form-control">
                                 <label class="label">
@@ -66,7 +67,7 @@
 
 
                     <!-- Cash Out Start -->
-                    <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <div id="cashOutSection" class=" hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                         <form class="card-body">
                             <div class="form-control">
                                 <label class="label">
