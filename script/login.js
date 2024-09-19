@@ -17,7 +17,7 @@ document.getElementById("login-button").addEventListener("click", function (even
     event.preventDefault(); // Prevents the page from reloading
 
     // Hardcoded phone number and PIN for validation
-    const hardcodedPhoneNumber = "1234567890";
+    const hardcodedPhoneNumber = "1234";
     const hardcodedPinNumber = "1234";
 
     // Get the value of the phone number
