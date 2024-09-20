@@ -37,7 +37,7 @@
 document.getElementById("cash-out-button").addEventListener("click", function (event) {
     event.preventDefault(); // Prevents the page from reloading
 
-    
+
     // Call the function to get the money amount and store the result
     const cashOutAmount = getInputFieldValueById("cash-out-amount");
 
@@ -50,11 +50,20 @@ document.getElementById("cash-out-button").addEventListener("click", function (e
     const hardcodedPinNumber = 1234;
 
 
+    if(isNaN(cashOutAmount)){
+        alert("Cash out amount must be a valid digit.");
+
+        return;
+    }
+
+  
+
+
 
     // Check if the entered PIN is correct
     if (pinNumber === hardcodedPinNumber) {
 
-       
+
 
         // Check if the cash out amount is less than or equal to the current balance
         if (cashOutAmount <= currentBalance) {
@@ -63,6 +72,12 @@ document.getElementById("cash-out-button").addEventListener("click", function (e
 
             // Update the balance display
             document.getElementById("balance").innerText = currentBalance;
+
+            const p = document.createElement('p');
+            p.textContent = `Cash Out ${cashOutAmount} Tk. Current Balance ${currentBalance}`
+
+            // Should be a Common Function
+            document.getElementById("Transaction-Container").appendChild(p);
 
             alert("Cash out successful ! New balance: " + currentBalance);
         }

@@ -49,6 +49,13 @@ document.getElementById("add-money").addEventListener("click", function (event) 
     const hardcodedPinNumber = 1234;
 
 
+    if(isNaN(MoneyAmount)){
+        alert("Amount must be a valid digit.");
+
+        return;
+    }
+
+
     // Check if the entered PIN is correct
     if (pinNumber === hardcodedPinNumber) {
 
@@ -56,6 +63,14 @@ document.getElementById("add-money").addEventListener("click", function (event) 
         // Update the balance
 
         document.getElementById("balance").innerText = currentBalance;
+
+        // Add to Transaction-History
+
+        const p = document.createElement('p');
+        p.textContent = `Added ${MoneyAmount} Tk. to balance. Current Balance ${currentBalance}`
+
+        // Should be a Common Function
+        document.getElementById("Transaction-Container").appendChild(p);
 
         alert("Money added successfully! New balance: " + currentBalance);
     }

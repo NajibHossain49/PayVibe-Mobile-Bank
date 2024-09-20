@@ -11,6 +11,7 @@
     <script src="script/cashOut.js" defer></script>
     <script src="script/ToggleFeature.js" defer></script>
     <script src="script/utilityFuntion.js" defer></script>
+    <script src="script/ToggleButton.js" defer></script>
 
 </head>
 
@@ -34,10 +35,17 @@
                     <div class="divider"></div>
 
                     <!-- user action Button -->
-                    <div>
-                        <button id="ToggleAddMoney" class="btn btn-lg">Add Money</button>
-                        <button id="ToggleCashOut" class="btn btn-lg">Cash Out</button>
+                    <div class="flex space-x-4">
+                        <button id="ToggleAddMoney"
+                            class="btn bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg">Add
+                            Money</button>
+                        <button id="ToggleCashOut"
+                            class="btn bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg">Cash
+                            Out</button>
+                        <button id="Transaction"
+                            class="btn bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded-lg">Transaction</button>
                     </div>
+
                     <div class="divider"></div>
 
                     <!-- Add Money From  START -->
@@ -91,7 +99,22 @@
                     </div>
                     <!-- Cash Out End -->
 
+                    <!-- Transaction start -->
 
+                    <div id="Transaction-Section" class="hidden">
+                        <h4 class="text-4xl text-center">
+                            Transaction History
+                        </h4> <br>
+
+
+                        <div id="Transaction-Container" class="text-center">
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Transaction end -->
 
                 </div>
 
